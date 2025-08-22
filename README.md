@@ -20,3 +20,6 @@ Open `index.html` in any modern browser. No build step needed.
 
 ---
 **Assignment fit**: Part 1 (visual effects), Part 2 (functions & scope), Part 3 (integration via class toggling).
+
+### v2 Update
+- Added **accessibility improvement**: modal can now be closed with the **Escape key**, in addition to click.
