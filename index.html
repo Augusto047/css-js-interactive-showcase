@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bringing Web Pages to Life — CSS & JavaScript</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="container">
+    <h1>Bringing Web Pages to Life</h1>
+    <p class="subtitle">CSS3 animations + JavaScript functions & scope</p>
+    <button id="themeToggle" class="btn">Toggle Theme</button>
+  </header>
+
+  <main class="container">
+    <section id="part1" class="card">
+      <h2>Part 1 — CSS3 Transitions & Animations</h2>
+      <p>Hover and focus the controls to see transitions. Some elements run keyframed animations.</p>
+
+      <div class="demo-row">
+        <button class="btn btn-ghost" id="pulseBtn">Hover Me</button>
+        <a href="#" class="link-underline">Animated Link</a>
+      </div>
+
+      <div class="box-stage">
+        <div id="box" class="box" aria-label="Animated box" role="img"></div>
+      </div>
+    </section>
+
+    <section id="part2" class="card">
+      <h2>Part 2 — JavaScript Functions, Parameters & Return Values</h2>
+      <p>This section wires reusable functions that compute durations, manage scope, and return values.</p>
+      <div class="controls">
+        <label>
+          Distance (px):
+          <input type="number" id="distanceInput" value="240" min="50" max="600" />
+        </label>
+        <label>
+          Speed (px/s):
+          <input type="number" id="speedInput" value="300" min="50" max="1200" />
+        </label>
+        <button id="animateRight" class="btn">Animate →</button>
+        <button id="animateLeft" class="btn">Animate ←</button>
+      </div>
+      <p id="durationOut" class="hint"></p>
+    </section>
+
+    <section id="part3" class="card grid-2">
+      <div>
+        <h2>Part 3 — Combining CSS & JS</h2>
+        <p>JavaScript toggles classes to start/stop CSS animations: a flip card, a modal, and a loader.</p>
+
+        <div class="flip" id="flipCard" tabindex="0" role="button" aria-pressed="false">
+          <div class="flip-inner">
+            <div class="flip-face flip-front">Front</div>
+            <div class="flip-face flip-back">Back</div>
+          </div>
+        </div>
+
+        <div class="demo-row">
+          <button id="openModal" class="btn">Open Modal</button>
+          <button id="toggleLoader" class="btn btn-ghost">Toggle Loader</button>
+        </div>
+      </div>
+
+      <div class="loader-wrap">
+        <div class="loader" id="loader" aria-hidden="true"></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-dialog">
+      <h3 id="modalTitle">Hello!</h3>
+      <p>This modal slides and fades using CSS; JavaScript controls visibility.</p>
+      <div class="right">
+        <button id="closeModal" class="btn">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="container small">
+    <p>Built by <strong>Augusto Mate</strong> · <a href="mailto:mate.augusto.mz@gmail.com">mate.augusto.mz@gmail.com</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
